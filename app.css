@@ -1,0 +1,55 @@
+*::after,
+*::before,
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a {
+   display: inline-block;
+}
+
+.accordion-opener {
+   padding: 20px;
+   display: block;
+}
+
+.accordion-content > div {
+   padding: 20px;
+}
+
+.accordion-content {
+   height: 0;
+   overflow: hidden;
+   transition: height 300ms ease-in-out;
+}
+
+.accordion-wrap {
+   max-width: 300px;
+   padding-bottom: 80px;
+}
+
+.accordion-block {
+   border-bottom: 1px solid #000;
+}
+
+.accordion-images {
+   height: 300px;
+   width: 500px;
+   position: relative;
+}
+
+.accordion-image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: beige;
+   opacity: 0;
+}
+
+.accordion-image.active {
+   opacity: 1;
+}

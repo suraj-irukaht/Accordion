@@ -1,0 +1,54 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a {
+   display: inline-block;
+}
+
+.accordion {
+   max-width: 500px;
+   border: 1px solid crimson;
+   padding: 10px;
+}
+
+.opener {
+   padding: 10px;
+}
+
+.is-drop {
+   max-height: 0;
+   overflow: hidden;
+   transition: 0.4s;
+}
+
+.is-drop > ul {
+   padding: 5px 10px;
+   border: 1px solid black;
+}
+
+.is-drop .is-drop > ul {
+   border-color: aquamarine;
+}
+
+.is-drop .is-drop .is-drop > ul {
+   border-color: cadetblue;
+}
+
+ul {
+   list-style: none;
+}
+
+li {
+   margin-bottom: 10px;
+}
+
+p {
+   margin-bottom: 10px;
+}
+
+.accordion > ul > li {
+   margin-bottom: 0;
+}
