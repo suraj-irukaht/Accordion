@@ -13,9 +13,7 @@ Give your drop display grid
 
 HTML
 
-`
-
-<ul>
+<!-- <ul>
     <li>
         <a class="opener">Opener</a>
         <div class="drop">
@@ -24,19 +22,18 @@ HTML
             </div>
         </div>
     </li>
-</ul>
-`
+</ul> -->
 
 CSS
 
-.drop {
-display: grid;
-grid-template-rows: 0fr;
-transition: grid-template-rows 500ms ease;
-}
+<!-- .drop {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms ease;
+} -->
 
 Give overflow hidden to inner element this inner element must wrap all content
 
-.drop > .inner {
-overflow: hidden;
-}
+<!-- .drop > .inner {
+    overflow: hidden;
+} -->
