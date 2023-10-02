@@ -1,0 +1,38 @@
+*::after,
+*::before,
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a {
+   display: inline-block;
+}
+
+.acc {
+   max-width: 300px;
+}
+
+.acc__opener {
+   padding: 20px;
+   display: block;
+}
+
+.acc__content > div {
+   padding: 20px;
+}
+
+.acc__content {
+   overflow: hidden;
+   transition: height ease-in-out;
+}
+
+.acc__wrap {
+   max-width: 300px;
+   padding-bottom: 80px;
+}
+
+.acc__item {
+   border-bottom: 1px solid #000;
+}

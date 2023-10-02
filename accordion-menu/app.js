@@ -1,12 +1,24 @@
 const drop = document.querySelectorAll('.is-drop');
+const screenSize = window.matchMedia('(max-width: 1023px)');
 
 if (drop) {
    drop.forEach((drop) => {
       let parentEL = drop.closest('li');
-      parentEL.classList.add('has-drop');
       let opener = parentEL.querySelector('.opener');
 
-      opener.addEventListener('click', function (e) {
+      run();
+      screenSize.addEventListener('change', run);
+
+      function run() {
+         if (screenSize.matches) {
+            parentEL.classList.add('has-drop');
+            opener.addEventListener('click', clickEvent);
+         } else {
+            destroy();
+         }
+      }
+
+      function clickEvent(e) {
          parentEL.classList.toggle('active');
          e.preventDefault();
          let parent = this.parentElement.parentElement.parentElement;
@@ -33,6 +45,14 @@ if (drop) {
                   });
                }
             });
-      });
+      }
+
+      function destroy() {
+         opener.removeEventListener('click', clickEvent);
+         if (parentEL.classList.contains('active')) {
+            parentEL.classList.remove('active');
+         }
+         drop.removeAttribute('style');
+      }
    });
 }

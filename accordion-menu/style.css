@@ -18,10 +18,9 @@ a {
    padding: 10px;
 }
 
-.is-drop {
-   max-height: 0;
+.menu__content {
    overflow: hidden;
-   transition: 0.4s;
+   transition: height ease-in-out;
 }
 
 .is-drop > ul {
